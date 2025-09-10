@@ -7,11 +7,27 @@
     */
 
     //Entrada
+    const notasAluno = [7, 5, 9, 8];
+    let maior = 0;
+    let menor = 10;
+    let media = 0;
 
-
+    
     //Processamento
-
-
+    for (let nota of notasAluno) {
+        if (nota >= maior) {
+            maior = nota;
+        }
+    }
+    for (let nota of notasAluno) {
+        if (nota <= menor) {
+            menor = nota;
+        }
+    }
+    for (let nota of notasAluno) {
+        media += nota;
+    }
+    media = media / notasAluno.length;
     //Saída
-
+    document.write(`A maior nota do aluno foi ${maior}, a menor foi ${menor} e sua media foi ${media}`);
 </script>

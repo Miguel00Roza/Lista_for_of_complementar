@@ -7,10 +7,16 @@
     */
 
     //Entrada
-
+    let numero = Number(prompt("Insira o numero que você deseja saber a tabuada:"));
 
     //Processamento
-
+    let resultado = 0;
+    let tabuada = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    document.write(`A tabuada do ${numero} é: <br>`)
+    for(let multiplicar of tabuada) {
+        resultado = numero * multiplicar;
+        document.write(`${numero} * ${multiplicar} = ${resultado} <br>`);
+    } 
 
     //Saída
     

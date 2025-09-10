@@ -6,11 +6,22 @@
     */
 
     //Entrada
-
+    let palavra = prompt("Escreva uma palavra (sem acentos)").toLowerCase();
+    let palavraLista = palavra.split("");
 
     //Processamento
+    let contadorVogal = 0;
+    let contadorConsoante = 0;
+    let vogais = ["a", "e", "i", "o", "u"];
 
+    for (let char of palavraLista) {
+        if (vogais.includes(char)) {
+            contadorVogal += 1;
+        } else {
+            contadorConsoante += 1;
+        }
+    }
 
     //Saída
-
+    document.write(`A palavra ${palavra} tem ${contadorVogal} vogais e ${contadorConsoante} consoantes`);
 </script>
