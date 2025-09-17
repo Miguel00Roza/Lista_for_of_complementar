@@ -7,11 +7,18 @@
     */
 
     //Entrada
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let noAlchool = [];
 
     //Processamento
-
+    let pergunta = "";
+    for (let bebida of bebidas) {
+        pergunta = prompt(`A bebida ${bebida} contem alchool (S-sim N-não)`).toUpperCase();
+        if (pergunta === "N") {
+            noAlchool.push(bebida);
+        }
+    }
 
     //Saída
-
+    document.write(`As bebidas permitidas para menores que 18 anos são: ${noAlchool}`);
 </script>

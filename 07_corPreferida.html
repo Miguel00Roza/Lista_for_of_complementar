@@ -8,11 +8,20 @@
     */
 
     //Entrada
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    let like = [];
 
     //Processamento
-
+    let pergunta = "";
+    let qtd = 0;
+    for (let cor of cores) {
+        pergunta = prompt(`Voce gosta da cor ${cor}? (S-sim N-não)`).toUpperCase();
+        if (pergunta === "S") {
+            like.push(cor);
+            qtd += 1;
+        }
+    }
 
     //Saída
-
+    document.write(`As cores que o usuario gostam são ${qtd} sendo ela(s): ${like}`);
 </script>

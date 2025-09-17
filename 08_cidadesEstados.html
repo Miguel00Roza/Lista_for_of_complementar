@@ -8,11 +8,18 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
     //Processamento
-
-
+    let rioGrande = [];
+    let santaCatarina = [];
+    let parana = []
+   
+    let pergunta = "";
+    for (let cidade of cidades) {
+        pergunta = prompt(`A cidade ${cidade} pertence a (RS-rio grande do sul, SC-santa catarina ou P-paraná)?`).toUpperCase();
+    }
+    
     //Saída
 
 </script>
