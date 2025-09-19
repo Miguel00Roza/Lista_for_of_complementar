@@ -11,13 +11,31 @@
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
     //Processamento
+
     let nomesSemAcento = [];
     let acentos = ["á", "é", "í", "ó", "ú"];
-    for (let nome of nomes) {
-        if (nome.includes(acentos)) {
-            
+
+    
+    for(let nome of nomes){
+    let nomeSemAcento ="";
+    for(let letra of nome){
+        if(letra === "á"){
+            nomeSemAcento += "a";
+        } else if(letra === "é" ){
+            nomeSemAcento += "e";
+        } else if(letra === "í"){
+            nomeSemAcento += "i";
+        } else if(letra === "ó"){
+            nomeSemAcento += "o";
+        } else if(letra === "ú"){
+            nomeSemAcento += "u"
+        } else{
+            nomeSemAcento+=letra;
         }
     }
+    nomesSemAcento.push(nomeSemAcento);
+}
+
     //Saída
-    
+    document.write(nomesSemAcento.join("-"));
 </script>

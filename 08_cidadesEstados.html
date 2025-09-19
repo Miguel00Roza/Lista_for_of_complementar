@@ -18,8 +18,44 @@
     let pergunta = "";
     for (let cidade of cidades) {
         pergunta = prompt(`A cidade ${cidade} pertence a (RS-rio grande do sul, SC-santa catarina ou P-paraná)?`).toUpperCase();
+        if (pergunta === "RS") {
+            rioGrande.push(cidade);
+        } else if (pergunta === "SC") {
+            santaCatarina.push(cidade);
+        } else if (pergunta === "P") {
+            parana.push(cidade);
+        } else {
+            alert("Invalido, cidade desconciderada")
+        }
     }
     
     //Saída
-
+    if (rioGrande.length >= santaCatarina.length && rioGrande.length >= parana.length) {
+        document.write(rioGrande + "<br>");
+        if (santaCatarina.length >= parana.length) {
+            document.write(santaCatarina + "<br>");
+            document.write(parana + "<br>");
+        } else {
+            document.write(parana + "<br>");
+            document.write(santaCatarina + "<br>");
+        }
+    } else if (santaCatarina.length >= rioGrande.length && santaCatarina.length >= parana.length) {
+        document.write(santaCatarina + "<br>");
+        if (rioGrande.length >= parana.length) {
+            document.write(rioGrande + "<br>");
+            document.write(parana + "<br>");
+        } else {
+            document.write(parana + "<br>");
+            document.write(rioGrande + "<br>");
+        }
+    } else {
+        document.write(parana + "<br>");
+        if (rioGrande.length >= santaCatarina.length) {
+            document.write(rioGrande + "<br>");
+            document.write(santaCatarina + "<br>");
+        } else {
+            document.write(santaCatarina + "<br>");
+            document.write(rioGrande + "<br>");
+        }
+    }
 </script>
